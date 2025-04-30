@@ -109,27 +109,33 @@ This approach reveals how **interconnections and vulnerabilities change dynamica
 
 ---
 
-## 📌 Summary
+## 📌 Conclusions
 
-| Feature                  | Description                                       |
-|--------------------------|---------------------------------------------------|
-| Focus                   | Tail co-movements in electricity markets          |
-| Metric Used             | Extreme Downside Correlation (EDC)                |
-| Tail Risk Quantification| Value-at-Risk (VaR) method                        |
-| Network Tool            | EDC-based dynamic networks                        |
-| Time Dynamics           | Rolling 365-day window                            |
-| Output                  | Evolving EDC matrices and network densities       |
 
----
+The analysis highlighted the effectiveness of the network density index as a tool for identifying risk periods in the European energy market. Using a 365-day rolling window, the index tracked the evolution of interconnections during extreme events, revealing a major phase of systemic stress from June to October 2022. The EDC method was particularly effective in uncovering latent dependencies, with clusters showing how regional interdependencies and market integration influence joint risk exposure.
 
-## 📈 Applications
+Countries in Southeast Europe (SEE) such as Greece, Croatia, and Hungary share vulnerabilities due to infrastructure constraints and gas dependency, while Central European (Germany, Netherlands, Czech Republic) and Iberian (Spain, Portugal) markets demonstrate strong internal integration. Medium-level correlations, including Italy's cross-border ties and the Estonia–Finland–Nordic connection, confirm the role of physical interconnections and shared risks.
 
-- **Energy system monitoring**
-- **Policy stress testing**
-- **Portfolio risk management**
-- **Market integration analysis**
+Overall, combining the network density index and EDC matrix helped identify critical periods and map countries based on shared risk exposure. Countries in the same cluster are more vulnerable to simultaneous shocks during stress, while isolated countries face more individual risks. These findings stress the importance of monitoring market connectivity and interdependence to better manage future energy crises.
 
----
+The EDC network can be integrated into early warning systems for the EU electricity market, helping regulators detect contagion risks. This framework can also simulate stress scenarios and assess shock propagation. Clusters with high tail dependence point to critical interconnections where resilience should be strengthened, through backup capacity and storage. The results also advocate for more coordinated EU policies during energy crises, particularly in shaping capacity mechanisms and demand response systems.
+### Requirements
+
+To run the analysis, the following Python packages are required:
+
+```python
+import pandas as pd 
+import numpy as np
+
+import seaborn as sns
+import matplotlib.pyplot as plt     
+from matplotlib.gridspec import GridSpec
+import matplotlib.dates as mdates
+
+from scipy.cluster.hierarchy import linkage
+from scipy.spatial.distance import pdist
+from scipy.cluster.hierarchy import leaves_list
+```
 
 ## 📬 Contact
 
