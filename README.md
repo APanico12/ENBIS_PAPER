@@ -124,17 +124,11 @@ The EDC network can be integrated into early warning systems for the EU electric
 To run the analysis, the following Python packages are required:
 
 ```python
-import pandas as pd 
-import numpy as np
-
-import seaborn as sns
-import matplotlib.pyplot as plt     
-from matplotlib.gridspec import GridSpec
-import matplotlib.dates as mdates
-
-from scipy.cluster.hierarchy import linkage
-from scipy.spatial.distance import pdist
-from scipy.cluster.hierarchy import leaves_list
+pandas>=1.0.0
+numpy>=1.18.0
+seaborn>=0.10.0
+matplotlib>=3.2.0
+scipy>=1.4.0
 ```
 
 ## 📬 Contact
